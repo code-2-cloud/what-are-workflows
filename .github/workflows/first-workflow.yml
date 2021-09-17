@@ -1,5 +1,5 @@
 # define an event that triggers our workflow
-on: workflow_dispatch
+on: push
 
 # define one or more jobs to execute
 jobs:
