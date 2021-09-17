@@ -1,8 +1,8 @@
 # What Are Workflows?
 
-Workflow files define the automated procedure that takes place when triggered by an event.
+**Workflow files** define the automated procedure that takes place when triggered by an event.
 
-**Workflows** are made up of one or more jobs.
+**Workflow files** are made up of one or more jobs.
 
 **Jobs** are made up of an environment (called a **Runner**) and one or more tasks called a **steps**.
 
