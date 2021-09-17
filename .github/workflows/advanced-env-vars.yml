@@ -23,4 +23,4 @@ jobs:
       - name: use a step variable
         run: echo "hello $STEP_USER"
       - name: try to use above step var
-        run : echo "another hello ${{ env.USER }}"
+        run : echo "another hello ${{ github.event.inputs.name }}"
