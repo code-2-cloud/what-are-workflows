@@ -1,0 +1,20 @@
+name: Using Env Vars
+
+on: workflow_dispatch
+
+env:
+  USER: "Matt"
+
+jobs:
+  job-1:
+    name: Say hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: use echo to say hello
+        run: echo "hello ${{ env.USER }}"
+      - name: echo our JOB_USER
+        run: echo "hello ${{ env.USER }}"
+      - name: use a step variable
+        run: echo "hello $STEP_USER"
+      - name: try to use above step var
+        run : echo "another hello ${{ env.USER }}"
