@@ -16,6 +16,12 @@ jobs:
         run: echo "hello $USER"
       - name: echo our JOB_USER
         run: echo "hello $JOB_USER"
+      - name: use a step variable
+        env:
+          STEP_USER: "step 1 user"
+        run: echo "hello $STEP_USER"
+      - name: try to use above step var
+        run : echo "another hello $STEP_USER"
   job-2:
     name: Say goodbye using echo
     runs-on: ubuntu-latest
