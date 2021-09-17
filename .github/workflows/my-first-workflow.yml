@@ -1,0 +1,13 @@
+# Specify the event or events that trigger this workflow file
+on: workflow_dispatch
+
+# specify the jobs and their environments
+jobs:
+  # give our first job an ID
+  say-hello:
+    # specify the runner
+    runs-on: ubuntu-latest
+    # define the tasks
+    steps:
+        # run a shell command called "echo"
+      - run: echo "hello from Actions"
