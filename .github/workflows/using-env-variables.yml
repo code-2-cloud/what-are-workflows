@@ -1,0 +1,14 @@
+name: Using Env Vars
+
+on: issues
+
+env:
+  USER: "Matt"
+
+jobs:
+  job-1:
+    name: Say hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: use echo to say hello
+        run: echo "hello $USER"
