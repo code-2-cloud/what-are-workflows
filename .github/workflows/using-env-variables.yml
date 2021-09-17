@@ -9,12 +9,18 @@ jobs:
   job-1:
     name: Say hello
     runs-on: ubuntu-latest
+    env:
+      JOB_USER: "job 1 user"
     steps:
       - name: use echo to say hello
         run: echo "hello $USER"
+      - name: echo our JOB_USER
+        run: echo "hello $JOB_USER"
   job-2:
     name: Say goodbye using echo
     runs-on: ubuntu-latest
     steps:
       - name: use echo to say goodbye
         run: echo "goodbye $USER"
+      - name: echo our JOB_USER
+        run: echo "hello $JOB_USER"
