@@ -11,3 +11,8 @@ jobs:
     steps:
         # run a shell command called "echo"
       - run: echo "hello from Actions"
+      - run: echo "another run step"
+  say_goodbye:
+    runs-on: windows-2022
+    steps:
+      - run: echo "goodbye from actions"
