@@ -10,3 +10,8 @@ jobs:
     steps:
 # run a command, or use an action
       - run: echo "hello from actions"
+  
+  say-goodbye:
+    runs-on: windows-latest
+    steps:
+      - run: echo "goodbye from actions"
