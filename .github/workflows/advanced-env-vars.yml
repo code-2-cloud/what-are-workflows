@@ -1,9 +1,15 @@
-name: Using Env Vars
+name: Advanced Env Vars
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Matt'
 
 env:
-  USER: "Matt"
+  USER: ${{ github.event.inputs.name }}
 
 jobs:
   job-1:
