@@ -11,4 +11,3 @@
 **Steps** are either **actions** or shell commands
 
 **Actions** are self contained units of work.  These are the smallest portable part of GitHub Actions.  Actions are easy to share and can be created by anyone!
-
