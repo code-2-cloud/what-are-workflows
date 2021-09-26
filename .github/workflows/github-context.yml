@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo the github context
+        id: using-ctx
         env:
-          CTX: ${{ toJSON(github) }}
-        run: echo $CTX
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: echo "::set-output name=number::$ISSUE_NUMBER"
+      - name: read the output from a previous step
+        run: echo "the issue number is ${{ steps.using-ctx.outputs.number }}"
