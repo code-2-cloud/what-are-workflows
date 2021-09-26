@@ -1,0 +1,13 @@
+name: view github context
+
+on: issues
+
+jobs:
+  job1:
+    name: view github context
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo the github context
+        env:
+          CTX: ${{ toJSON(github) }}
+        run: echo $CTX
